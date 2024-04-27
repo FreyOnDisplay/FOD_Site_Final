@@ -14,20 +14,7 @@ p, body{
     1. set up your flex box code in the default section
     2. Modify the code in the sections for larger viewports */
  
-   /*HEADER*/
-  .header {
-    display: flex;
-    box-sizing: border-box;
-    justify-content: space-between;
-    align-items:center;
-    background-color: #ffff;
-    gap:16px;
-    font-family: "Montserrat", sans-serif;
-    font-variant:small-caps;
-    font-weight: 800;
-    font-size:24px;
-  }
-
+   /*HEADER BUTTONS*/
   .favicon{
     display:flex;
     align-items:center;
@@ -101,22 +88,7 @@ p, body{
     transform:scale(1.00);
     will-change:transform;
     } 
-    
-  /*Footer*/
-    .footer{
-      display: flex;
-      box-sizing: border-box;
-      justify-content: space-evenly;
-      align-items:center;
-      background-color: #CAFCEA;
-      gap:16px;
-      font-family: "Montserrat", sans-serif;
-      font-variant:small-caps;
-      font-weight: 800;
-      font-size:24px;
-    }
-  /*HOME*/
-  
+
   /*CLIENTS*/
   
   /*ILLUSTRATION*/
@@ -126,7 +98,6 @@ p, body{
   /*CONTACT*/
   /* https://www.phptutorial.net/php-tutorial/php-form/ 
   Maybe one day I'll set this up properly with folders and a server ^^; */
-  
   .form-nest{
     display:flex;
     align-content:center;
@@ -191,13 +162,38 @@ p, body{
             }
             <?php endif ?> */
             
-  /* Containers */           
- 
+  /* Containers */     
+  iframe{
+    width:1280px;
+    aspect-ratio: 16/9;
+    border:none;
+    box-shadow:none;
+  }
+  
+  .img2{
+    width:1280px;
+    aspect-ratio: 16/9;
+    margin:0;
+  }
+  .header {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items:center;
+    background-color:white;
+    gap:16px;
+    padding:16px;
+    font-family: "Montserrat", sans-serif;
+    font-variant:small-caps;
+    font-weight: 800;
+    font-size:24px;
+  }
+
   .container{
+    width:auto;
     display: flex;
     background-color:white;
     gap:16px;
-    width: 100vw;
     flex-direction:column;
     box-sizing: border-box;
     align-items:center;
@@ -218,6 +214,18 @@ p, body{
     position:absolute;
   }
 
+  .footer{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    background-color: #CAFCEA;
+    gap:16px;
+    padding:16px;
+    font-family: "Montserrat", sans-serif;
+    font-variant:small-caps;
+    font-weight: 800;
+    font-size:24px;
+  }
    /* MEDIUM viewport (380px and above)
     You can see that we are just making modifications to the .container and .content-block.
     Because CSS styles cascades. Typically, the styles appears later in the file overwrites the styles above.  
@@ -227,7 +235,7 @@ p, body{
  
   }
 
-    /* LARGE viewport (730px and above) */
+  /* LARGE viewport (730px and above) */
 
   @media only screen and (min-width: 730px) {
 
