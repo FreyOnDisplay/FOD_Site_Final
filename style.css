@@ -1,0 +1,265 @@
+p, body{
+    margin:0 }
+
+body{
+      background-color: white;
+    }
+ /*REMEMBER THIS PLEASE FREY. PLEEEASE. C'MON.*/
+       
+ /*The header also uses flexbox. Unlike using float, this is a lot easier to layout your items.
+  With just "display: flex" and "justify-content: space-between," you can add as many things
+  as you want into the header container. The browser will try to space out these items evenly
+  and side by side for you. 
+  
+  Workflow:
+    1. set up your flex box code in the default section
+    2. Modify the code in the sections for larger viewports */
+ 
+   /*HEADER*/
+  .header {
+    display: flex;
+    gap:16px;
+    width: 100vw;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    align-items:center;
+    background-color: #ffff;
+    font-family: "Montserrat", sans-serif;
+    font-variant:small-caps;
+    font-weight: 800;
+    font-size:24px;
+  }
+
+  .favicon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:12%;
+    padding:8px, 0px;
+    object-fit:cover;
+  }
+  
+  .hbutton{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:12%;
+    padding:16px;
+    color:black;
+    box-sizing: border-box;
+    border-radius: 16px;
+    text-decoration:none;
+    text-align:center;
+    }
+
+  .hbutton:hover{
+    background-color: transparent;
+    text-decoration: none;
+    color: #EC058E;
+    }
+    
+   /*hcontact is modified from Cool Beans 60fps*/
+  .hcontact{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:12%;
+    padding:16px;
+    border-radius: 16px;
+    color:black;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    transition: 0.2s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
+    box-sizing: border-box;
+    }
+
+  .hcontact:after{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    height:100%;
+    border-radius: 16px;
+    background-color: #0EB697;
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(15deg);
+    transform-origin: top left;
+    transition: 0.2s transform ease-out;
+    z-index: -1;
+    }
+
+  .hcontact:hover:after {
+    transform: translate(0, 0);
+    }
+
+  .hcontact:hover {
+    color: White;
+    transform:scale(1.00);
+    will-change:transform;
+    } 
+   
+  .container_column {
+    display: flex;
+    width:100%;
+    flex-direction:column;
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+    align-content:center;
+    }
+  
+  .container_row {
+    display: flex;
+    flex-direction:row;
+    gap: 10px;
+    padding: 10px;
+    justify-content: space-evenly;
+    align-content:center;
+    }
+    
+    .container{
+      display:flex;
+      align-content:center;
+      justify-content:center;
+    }
+   /*HOME PAGE*/
+
+  .video area{
+    display: flex;
+    width:100%;
+    align-items:flex-start;
+    align-self:center;
+    padding:16px;
+    justify-content:center;
+  }
+
+  .video{
+    display: flex;
+    align-self:center;
+    position:relative;
+    top:0;
+    left:0;
+  }
+  
+  .vlay1{
+    width:100%;
+    height:100%;
+    display: flex;
+    position:absolute;
+    opacity:100%;
+    top:0;
+    left:0;
+  }
+  .vlay1:hover{
+   display:none;
+    pointer-events: none;
+  }
+
+  .vlay2{
+    display: flex;
+    position:absolute;
+    align-self:flex-end;
+  }
+
+  .content1{
+    display:flex;
+    justify-content:space-between;
+    width:100%;
+    flex-wrap:wrap;
+    align-content:center;
+  }
+  .portrait{
+    display:flex;
+    width:30%;
+    height:auto;
+    font-family: "Montserrat", sans-serif;
+    width:400px;
+    font-size:16px;
+  }
+
+  .GR{
+    display:flex;
+    width:100%;
+    flex-wrap:wrap;
+    align-content:flex-start;
+    justify-content:center;
+  }
+
+  /*CONTACT*/
+  /* https://www.phptutorial.net/php-tutorial/php-form/ 
+  Maybe one day I'll set this up properly with folders and a server ^^; */
+  
+  .form_nest{
+    display:flex;
+    align-content:center;
+    padding:12px;
+  }
+
+  .form_box{
+    display:flex;
+    align-self:flex-start;
+    flex-direction:column;
+    padding-bottom: 4px;
+  }
+
+  input[type=text], input[type=email], select, textarea {
+    font-family:'Montserrat';
+    padding: 12px;
+    border: 1px solid #000;
+    border-radius: 16px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    width:600px;
+  }
+  
+  button[type=submit] {
+    display:flex;
+    width:fit-content;
+    color: #000;
+    padding: 16px;
+    border: 2px solid #0EB697;
+    background-color:#ffff;
+    border-radius: 16px;
+    cursor: pointer;
+  }
+  
+  button[type=submit]:hover {
+    background-color: #0EB697;
+    color:#ffff;
+  }
+
+  /*
+  Included in php file. However I don't have a local server for any hosting. So, let's hold off on this!
+  
+  <?php if ($_SERVER['REQUEST_METHOD'] === 'GET') : ?>
+            <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
+
+  <?php else : ?>
+
+            <?php 
+            if (isset($_POST['name'], $_POST['email')) {
+              $name = htmlspecialchars($_POST['name']);
+              $email = htmlspecialchars($_POST['email']);
+                $option = htmlspecialchars($_POST['email']);
+                $email_title = htmlspecialchars($_POST['email']);
+                $message = htmlspecialchars($_POST['email']);
+
+              echo "Thanks $name for your subscription.<br>";
+              echo "Please confirm it in your inbox of the email $email.";
+            } else {
+              echo 'Please fill out all fields.';
+            }
+            <?php endif ?> */
+ 
+ /* MEDIUM viewport (380px and above)
+    You can see that we are just making modifications to the .container and .content-block.
+    Because CSS styles cascades. Typically, the styles appears later in the file overwrites the styles above.  
+    */
