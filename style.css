@@ -18,7 +18,12 @@ p, body{
     font-family:'Saira Stencil One';
     font-size:64px;
     text-align:center;
-    position: absolute;
+  }
+ 
+  h2{
+    font-family:'Saira Stencil One';
+    font-size:32px;
+    text-align:center;
   }
   
   
@@ -88,6 +93,37 @@ p, body{
   /*CLIENTS*/
   
   /*ILLUSTRATION*/
+
+  .parallax1, .parallax2 {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    position:relative;
+  }
+  
+  .parallax1{
+    background-image: url("images/sitehero.webp");
+  }
+
+  .parallax2{
+    background-image: url("images/galhero.webp");
+  }
+  
+  @media only screen and (max-device-width: 1366px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+
+  }
+
+  /* https://github.com/lokesh/lightbox2 Praise be, lightbox2 opensource plugin*/
   .gallery{
     display:flex;
     flex-direction:row;
@@ -183,8 +219,7 @@ p, body{
     align-self:center;
   }
   .img-2{
-    width:100%;
-    align-self:center;
+    width:screen;
   }
   .header {
     display: flex;
@@ -208,23 +243,17 @@ p, body{
     flex-direction:column;
     box-sizing: border-box;
     align-items:center;
+  }
+
+  .container-row {
+    display: flex;
+    background-color:white;
+    overflow-x:hidden;
+    justify-content:space-evenly;
+    align-items:center;
     align-content:center;
   }
 
-  .container .row {
-    flex-direction:row;       
-  }
-
-  .container .stack{
-    position:absolute;
-  }
-  
-  .container-hero{
-    display: flex;
-    box-sizing: border-box;
-    justify-content: center;
-  
-  }
   .footer{
     display: flex;
     box-sizing: border-box;
