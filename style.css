@@ -1,5 +1,7 @@
 p, body{
     margin:0;
+    font-family: "Montserrat", sans-serif;
+    font-size:24px;
   }
 
  /*REMEMBER THIS PLEASE FREY. PLEEEASE. C'MON.*/
@@ -16,21 +18,26 @@ p, body{
   /*https://www.freepik.com/free-vector/clips-pins-various-note-paper-stripe-ragged-stick-realistic-object-set_2868912.htm
   https://www.freepik.com/free-vector/abstract-blue-bordered-with-torn-white-paper-edges-from-top-bottom-realistic-set_6846645.htm
   https://www.freepik.com/free-vector/washi-tape-clipart-colorful-stationery-collage-element-vector-set_20775345.htm*/
- 
   
-  h1{
+  h1, h2{
     font-family:'Saira Stencil One';
     font-size:64px;
-    text-align:center;
+    text-align:left;
+    max-width: 15ch;
+    margin:16px;
+  }
+  h2{
+    font-size:32px;
+    max-width: 45ch;
+    text-align:left;
+  }
+
+  span{
+    font-weight: 400;
+    font-size:24px;
+    max-width: 75ch;
   }
  
-  h2{
-    font-family:'Saira Stencil One';
-    font-size:32px;
-    text-align:center;
-  }
-  
-  
     /*HEADER BUTTONS*/
   .logo{
     align-items:center;
@@ -121,23 +128,13 @@ p, body{
   }
   
   @media only screen and (max-device-width: 1366px) {
-    .parallax {
+    .parallax1, .parallax2 {
       background-attachment: scroll;
     }
 
   }
 
   /* https://github.com/lokesh/lightbox2 Praise be, lightbox2 opensource plugin*/
-  .gallery{
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content:center;
-    background-color:white;
-    gap:12px;
-    padding:16px;
-    align-content:center;
-  }
   
   /*ABOUT*/
   
@@ -146,13 +143,12 @@ p, body{
   Maybe one day I'll set this up properly with folders and a server ^^; */
   .form-nest{
     display:flex;
-    align-content:center;
+    justify-content:center;
     padding:12px;
   }
 
   .form-box{
     display:flex;
-    align-self:flex-start;
     flex-direction:column;
     padding-bottom: 4px;
   }
@@ -210,66 +206,37 @@ p, body{
             
   /* Containers */     
   iframe{
-    width:1280px;
+    width:1480px;
     aspect-ratio: 16/9;
     border:none;
     box-shadow:none;
   }
-  
-  .img-1{
-    width:1600px;
-    aspect-ratio: 16/9;
-    margin:0;
-    align-self:center;
-  }
-  .img-2{
-    width:screen;
-  }
-  .header {
+
+  .header, .container, .footer{
     display: flex;
     box-sizing: border-box;
-    justify-content:space-evenly;
+    justify-content:center;
     align-items:center;
-    background-color:white;
-    gap:16px;
-    padding:16px;
-    font-family: "Montserrat", sans-serif;
-    font-variant:small-caps;
-    font-weight: 800;
-    font-size:24px;
-  }
-
-  .container{
-    display: flex;
-    background-color:white;
-    overflow-x:hidden;
-    gap:16px;
-    flex-direction:column;
-    box-sizing: border-box;
-    align-items:center;
-  }
-
-  .container-row {
-    display: flex;
-    background-color:white;
-    overflow-x:hidden;
-    justify-content:space-evenly;
-    align-items:center;
-    align-content:center;
+    flex-wrap:wrap;
+    gap:24px;
+    padding:24px;
+    margin-inline:64px, 0px, 64px, 0px;
   }
 
   .footer{
-    display: flex;
-    box-sizing: border-box;
-    justify-content: center;
     background-color: #CAFCEA;
-    gap:16px;
-    padding:16px;
-    font-family: "Montserrat", sans-serif;
+    font-size:16px;
+    gap:64px;
+  }
+
+  .header {
+    justify-content:space-evenly;
+    background-color:white;
     font-variant:small-caps;
     font-weight: 800;
     font-size:24px;
   }
+
    /* MEDIUM viewport (380px and above)
     You can see that we are just making modifications to the .container and .content-block.
     Because CSS styles cascades. Typically, the styles appears later in the file overwrites the styles above.  
