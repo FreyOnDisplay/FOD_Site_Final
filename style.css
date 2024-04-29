@@ -19,7 +19,7 @@ p, body{
   https://www.freepik.com/free-vector/abstract-blue-bordered-with-torn-white-paper-edges-from-top-bottom-realistic-set_6846645.htm
   https://www.freepik.com/free-vector/washi-tape-clipart-colorful-stationery-collage-element-vector-set_20775345.htm*/
   
-  h1, h2{
+  h1, h2, h3{
     font-family:'Saira Stencil One';
     font-size:64px;
     text-align:left;
@@ -35,7 +35,10 @@ p, body{
   span{
     font-weight: 400;
     font-size:24px;
-    max-width: 75ch;
+    max-width: 100ch;
+  }
+  img{
+    max-width:100%;
   }
  
     /*HEADER BUTTONS*/
@@ -220,14 +223,27 @@ p, body{
     flex-wrap:wrap;
     gap:24px;
     padding:24px;
+    max-width:100%;
     margin-inline:64px, 0px, 64px, 0px;
   }
 
   .footer{
     background-color: #CAFCEA;
     font-size:16px;
-    gap:64px;
+    gap:24px;
   }
+
+  .fbutton{
+    width:100px;
+    padding:12px;
+    color:white;
+    background-color:#0EB697;
+    border-radius: 16px;
+    text-decoration:none;
+    text-align:center;
+    font-size:12px;
+    flex-wrap:wrap;
+    }
 
   .header {
     justify-content:space-evenly;
@@ -245,9 +261,17 @@ p, body{
   @media only screen and (min-width: 380px) {
  
   }
-
+  .header{
+    padding:12px;
+  }
+  .container{
+    flex-direction:row;
+    flex-wrap: wrap;
+  }
   /* LARGE viewport (730px and above) */
 
   @media only screen and (min-width: 730px) {
-
+  .container{
+     padding:24px;
+    }
     }
